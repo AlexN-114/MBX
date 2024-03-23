@@ -1,4 +1,5 @@
 #include <windows.h>
+#include <stdlib.h>
 
 typedef struct 
 {
@@ -88,7 +89,7 @@ int WINAPI WinMain(HINSTANCE hInstance, HINSTANCE hPrevInstance, LPSTR lpCmdLine
     
     if (0 < thrdParam.zeit)
     {
-        CreateThread(NULL,NULL,EndIn,(void*)&thrdParam,NULL,&ThrdID);        
+        CreateThread(NULL,0,EndIn,(void*)&thrdParam,0,&ThrdID);        
     }
 
     MessageBox(NULL,nachricht,titel,MB_OK);
